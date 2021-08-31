@@ -4,7 +4,7 @@ flask-login
 sqlalchemy.orm
 flask-email
 sqlalchemy
-werkzeug.security
+werkzeug
 os
 flask_sqlalchemy
 flask_migrate
