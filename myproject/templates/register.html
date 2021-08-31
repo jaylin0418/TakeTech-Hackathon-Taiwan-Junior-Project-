@@ -1,0 +1,113 @@
+{# {% extends 'shared/layout.html' %}
+
+{% block title %}
+註冊頁面
+{% endblock %}
+
+{% block body %}
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-lg-6">
+      <h1>註冊</h1>
+      <form method='POST'>
+        {{ form.hidden_tag() }}
+        <div class="mb-3">
+          <label for="exampleInputEmail1" class="form-label">{{form.username.label}} </label>
+          {{form.username(class_="form-control form-control-lg", id="exampleInputEmail1", type="email",
+          **{'aria-describedby':"emailHelp"}) }}
+          <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+        </div>
+        <div class="mb-3">
+          <label for="exampleInputEmail1" class="form-label">{{form.user_id.label}} </label>
+          {{form.user_id(class_="form-control form-control-lg", type="text",
+          **{'aria-describedby':"emailHelp"}) }}
+          <div id="emailHelp" class="form-text"><div>
+        </div>
+        <div class="mb-3">
+          <label for="exampleInputPassword1" class="form-label">{{ form.password.label }}</label>
+          {{form.password(class_="form-control form-control-lg", id="exampleInputPassword1", type="password") }}
+        </div>
+        {{ form.role.label }}
+        <div class="form-check">
+          <label class="form-check-label" for="flexRadioDefault1" ,value='group'>
+            {{ form.role(class_="form-control form-control-lg") }}
+          </label>
+        </div>
+        {{form.submit(class_="btn btn-primary btn-lg")}}
+        {% with messages = get_flashed_messages() %}
+        {% if messages %}
+        <ul class="flash">
+            {% for message in messages %}
+                <li>{{ message }}</li>
+            {% endfor %}
+        </ul>
+        {% endif %}
+        {% endwith %}
+      </form>
+      {{warning}}
+    </div>
+  </div>
+</div>
+
+{% endblock %} #}
+
+{% extends 'shared/layout.html' %}
+
+{% block title %}
+註冊頁面
+{% endblock %}
+
+{% block body %}
+
+<style>
+  #role {
+    border: none
+  }
+</style>
+
+<div class=" ">
+  <div class="row justify-content-center">
+    <div class="col-lg-6">
+      <h1>註冊</h1>
+      <form method='POST'>
+        {{ form.hidden_tag() }}
+        <div class="mb-3">
+          <label for="exampleInputEmail1" class="form-label">{{form.username.label}} </label>
+          {{form.username(class_="form-control form-control-lg", id="exampleInputEmail1", type="email",
+          **{'aria-describedby':"emailHelp"}) }}
+          <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+        </div>
+        <div class="mb-3">
+          <label for="exampleInputEmail1" class="form-label">{{form.user_id.label}} </label>
+          {{form.user_id(class_="form-control form-control-lg", type="text",
+          **{'aria-describedby':"emailHelp"}) }}
+          <div id="emailHelp" class="form-text">
+            <div class="mb-3">
+              <label for="exampleInputPassword1" class="form-label">{{ form.password.label }}</label>
+              {{form.password(class_="form-control form-control-lg", id="exampleInputPassword1", type="password") }}
+            </div>
+            {{ form.role.label }}
+            <div class="form-check" id="check_box_regist">
+              <label class=" no-border form-check-label" for="flexRadioDefault1" ,value='group'>
+                {{ form.role(class_=" no-border form-control form-control-lg ") }}
+              </label>
+            </div>
+            <br>
+            {{form.submit(class_="btn btn-primary btn-lg")}}
+            {% with messages = get_flashed_messages() %}
+            {% if messages %}
+            <ul class="flash">
+              {% for message in messages %}
+              <li>{{ message }}</li>
+              {% endfor %}
+            </ul>
+            {% endif %}
+            {% endwith %}
+          </div>
+      </form>
+      {{warning}}
+    </div>
+  </div>
+</div>
+
+{% endblock %}

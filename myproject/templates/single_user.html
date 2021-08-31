@@ -1,0 +1,88 @@
+{% extends 'shared/layout.html' %}
+
+{% block title %}
+{{ user.user_id }}
+{% endblock %}
+{% block body %}
+<style>
+    #floatingTextarea {
+        height: 300px;
+    }
+
+    .form-control:disabled,
+    .form-control[readonly] {
+        background-color: white;
+    }
+</style>
+{#
+使用者id: {{user.user_id}} <br>
+{% if current_user.user_id == user.user_id %}
+使用者電子郵件：{{ user.username}}<br>
+<form method="POST">
+    您的公開自我介紹：
+    <textarea name='content'>{{user.intro}}</textarea><br>
+    <button type='submit'>更新</button>
+</form>
+{% else %}
+他的公開自我介紹：<br>
+{% if user.intro %}
+{{ user.intro }}
+{% else %}
+此用戶尚未撰寫自我介紹
+{% endif %}
+{% endif %} #}
+<div class="container">
+    <div class="row justify-content-left ">
+        <div class="col-lg-6 justify-content-left ">
+            <h1>個人頁面</h1>
+        </div>
+    </div>
+    <div class="row justify-content-center ">
+        <div class="col-lg-2 justify-content-left">
+            <label for="staticEmail" class="col-form-label">使用者 ID</label>
+        </div>
+        <div class="col-lg-10 justify-content-left mb-2">
+            <input type="text" readonly class=" form-control" id="staticEmail" value={{user.user_id}}>
+        </div>
+    </div>
+    {% if current_user.user_id == user.user_id %}
+    <div class="row justify-content-left">
+        <div class="col-lg-2 justify-content-left">
+            <label for="staticuser" class="col-form-label">使用者電子郵件</label>
+        </div>
+        <div class="col-lg-10 justify-content-left">
+            <input type="text" readonly class=" form-control" id="staticuser" value={{user.username}}>
+        </div>
+    </div>
+    <div class="row justify-content-left">
+        <div class="col-lg-12 justify-content-left">
+            <form method="POST">
+                <div class="form-floating">
+                    <label for="staticuser" class="col-form-label">您的公開自我介紹，如果您是組織，也可以在這裡大致大致說明一下您們所缺少的資源！</label>
+
+                    <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea" type='text'
+                        name='content'>{{user.intro}}</textarea>
+                </div>
+                <button type="submit" class="btn btn-primary m-3">更新</button>
+            </form>
+        </div>
+    </div>
+    {% else %}
+    <div class="mb-4 row">
+        <label for="staticEmail" class="col-form-label">他的公開自我介紹</label>
+        {% if user.intro %}
+        <div class="col-sm-10">
+            <input type="text" readonly class="form-control-plaintext" id="staticEmail" value={{ user.intro }}>
+        </div>
+        {% else %}
+        <div class="col-sm-10">
+            <input type="text" readonly class="form-control-plaintext" id="staticEmail" value="此用戶尚未撰寫自我介紹">
+        </div>
+        {% endif %}
+    </div>
+
+    {% endif %}
+</div>
+</div>
+</div>
+{% endblock %}

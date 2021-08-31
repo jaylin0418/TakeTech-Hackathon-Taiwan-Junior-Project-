@@ -1,0 +1,44 @@
+{% extends 'shared/layout.html' %}
+
+{% block title %}
+物資
+{% endblock %}
+
+{% block body %}
+<div class="container">
+    <h1>志工列表</h1>
+
+    <div class="alert alert-light" role="alert">
+        熱心的志工們如下，請有需要的組織機構自行聯絡。
+    </div>
+
+    <!-- <h4 style="color:#223a66;">點選物品名稱進行申請及查看物品詳細資料</h4> -->
+    <table class="table table-striped table-hover">
+        
+        <thead>
+
+            <tr>
+                <th>志工 ID</th>
+                <th>專長</th>
+                <th>志工經驗</th>
+                <th>可服務時間</th>
+                <th>聯絡方式</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for info in infos %}
+            <tr>
+                <td><a href='/{{ info.uploader_id }}'>{{info.id}}</a></td>
+                <td>{{info.professional}}</a></td>
+                <td>{{info.experience}}</td>
+                <td>{{info.time}}</td>
+                <td>{{info.contact}}</td>
+                {# class="text-right" 讓文字靠右 #}
+            </tr>
+            {% endfor %}
+        
+        </tbody>
+    </table>
+</div>
+
+{% endblock %}

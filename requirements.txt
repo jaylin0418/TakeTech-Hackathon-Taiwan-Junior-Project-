@@ -1,0 +1,16 @@
+datetime
+re
+flask
+flask-login
+sqlalchemy.orm
+email.mime.multipart
+email.mime.text
+smtplib
+time
+sqlalchemy
+werkzeug.security
+os
+flask_sqlalchemy
+flask_migrate
+flask-wtf
+wtforms

@@ -1,0 +1,136 @@
+{% extends 'shared/layout.html' %}
+
+{% block title %}
+物資
+{% endblock %}
+
+{% block body %}
+<div class="container">
+    <h1>可申請物資列表</h1>
+    {# <form method="POST">
+    {{ form.hidden_tag() }}
+    {{ form.word.label }}
+    {{ form.word(class_="form-control form-control-lg") }}
+    {{ form.submit(class_="btn btn-main-2 btn-round-full mt-3") }}
+    </form> #}
+    {# <div class="alert alert-light" role="alert">
+        點選物品名稱或ID可進入申請及物品詳細資料的頁面；點選上傳者可看到上傳者資訊。<br>
+        若您為個人帳號，您僅能看到自己所提交的物資。
+    </div> #}
+    <div class="alert alert-warning" role="alert">
+        點選物品名稱或ID可進入申請及物品詳細資料的頁面；點選上傳者可看到上傳者資訊。<br>
+        若您為個人帳號，您僅能看到自己所提交的物資。
+      </div>
+      <br>
+    <div class="sidebar-widget search  mb-3 ">
+        <h5>Search Here</h5>
+        <form method="POST" class="search-form">
+            {{ form.hidden_tag() }}
+            <label for="word" class="form-label">{{ form.word.label }}</label>
+            {{ form.word(class_="form-control") }}
+            <!-- <input type="text" class="form-control" placeholder={{ form.word.label }} value={{ form.word }}>
+            <i class="ti-search"></i> -->
+            {{ form.submit(class_="btn btn-main-2 btn-round-full mt-3") }}
+        </form>
+    </div>
+    
+    <h4>物資列表</h4>
+    <div class="divider mb-4"></div>
+    <br>
+    <!-- <h4 style="color:#223a66;">點選物品名稱進行申請及查看物品詳細資料</h4> -->
+    <table class="table table-striped table-hover">
+        
+        <thead>
+
+            <tr>
+                <th>物品編號</th>
+                <th>上傳者</th>
+                <th>物品</th>
+                <th>物品細節</th>
+                <th>數量</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% if current_user.role =='G' %}
+            {% for info in infos %}
+            <tr>
+                <td><a href='/{{ info.uploader_id }}'>{{info.id}}</a></td>
+                <td><a href='/{{ info.uploader_id }}'>{{info.uploader_id}}</a></td>
+                <td><a href='/{{ info.id }}'>{{info.product_name}}</a></td>
+                <td>{{info.product_details}}</td>
+                <td>{{info.quantities}}</td>
+                {# class="text-right" 讓文字靠右 #}
+            </tr>
+            {% endfor %}
+            {% endif %}
+            {% if current_user.role =='I' %}
+            {% for info in infos %}
+            <tr>
+                {% if current_user.user_id == info.uploader_id %}
+                <td>{{info.id}}</td>
+                <td><a href='/{{ info.uploader_id }}'>{{info.uploader_id}}</a></td>
+                <td><a href='/{{ info.id }}'>{{info.product_name}}</a></td>
+                <td>{{info.product_details}}</td>
+                <td>{{info.quantities}}</td>
+                {# class="text-right" 讓文字靠右 #}
+                {% endif %}
+            </tr>
+            {% endfor %}
+            {% endif %}
+        </tbody>
+    </table>
+</div>
+
+    {# {% for page in range(1, last_page + 1) %}
+    <a href="picture">{{ page }}</a>
+    {% endfor %}
+</div>
+
+<body>
+    <table>
+        <tr>
+            <td>上傳者</td>
+            <td>物品</td>
+            <td>物品細節</td>
+            <td>數量</td>
+        </tr>
+        {% if current_user.role == 'I'}
+        {% for info in infos %}
+        {% if current_user.username == info.uploader %}
+        <tr>
+            <td><a href='/{{info.uploader}}'>{{info.uploader}}</a></td>
+            <td>{{info.product_name}}</td>
+            <td>{{info.product_details}}</td>
+            <td>{{info.quantities}}</td>
+        </tr>
+        {% endif %}
+        {% endfor %}
+        {% endif %}
+    </table>
+</body>
+
+</html>
+</body>
+
+</html>#}
+{#
+{% extends 'shared/layout.html' %}
+{% block body %}
+<div class="container">
+    <div class="row">
+        {% for info in infos %}
+        <div class="col-md-3">
+            <div class="card mb-3">
+                {# <img class="card-img-top" src="/static/images/{{stock.id}}.jpg" alt="">
+                <div class="card-body">
+                    <h4 class="card-title">{{info.product_name}}</h4>
+                    <p class="card-text">{{info.product_details}}</p>
+                    <a href="/stock/{{ stock.id }}" class="btn btn-primary">檢視詳情</a>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+#}
+{% endblock %}

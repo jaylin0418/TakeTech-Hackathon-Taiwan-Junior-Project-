@@ -1,0 +1,51 @@
+{% extends 'shared/layout.html' %}
+
+{% block title %}
+各組織介紹及需求
+{% endblock %}
+{% block body %}
+{#
+
+<table class="table table-striped table-hover">
+    <tr>
+      <th>機構、學校名稱</th>
+      <th>機構、學校電子郵件</th>
+      <th>需求內容及介紹</th>
+    </tr>
+    {% for info in infos %}
+    {% if info.role == 'G' %}
+    <tr>
+      <td><a href='/{{info.user_id}}'>{{info.user_id}}</a></td>
+      <td>{{info.username}}</td>
+      <td>{{info.intro}}</td>
+    </tr>
+    {% endif %}
+    {% endfor %}
+  </table> #}
+<div class="container">
+  <table class="table table-striped table-hover">
+    <h1>各機構及學校的需求</h1>
+    <br>
+    <thead>
+
+        <tr>
+            <th>機構、學校名稱</th>
+            <th>機構、學校電子郵件</th>
+            <th>需求內容及介紹</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for info in infos %}
+        {% if info.role == 'G' %}
+        <tr>
+          <tr>
+            <td><a href='/{{info.user_id}}'>{{info.user_id}}</a></td>
+            <td>{{info.username}}</td>
+            <td>{{info.intro}}</td>
+          </tr>
+        {% endif %}
+        {% endfor %}
+    </tbody>
+  </table>
+</div>
+{% endblock %}

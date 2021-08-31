@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+{% extends 'shared/layout.html' %}
+{% block body %}
+<style>
+    .testimonial:before {
+        width: 48%;
+        height: 100%;
+        top: 0;
+        left: 0px;
+        position: absolute;
+        content: "";
+        background: url("{{ url_for('static', filename='images/bg/bg-2.png') }}") no-repeat 50% 50%;
+    }
+    .bg-1 {
+        background: url("{{ url_for('static', filename='images/bg/22.jpg') }}") no-repeat 50% 50%;
+        background-size: cover; 
+        position: relative;
+    }
+    .banner {
+        position: relative;
+        overflow: hidden;
+        background: #fff;
+        background: url("{{ url_for('static', filename='images/bg/22.jpg') }}")) no-repeat;
+        background-size: cover;
+        min-height: 550px;
+    }
+</style>
+
+<section class="page-title bg-1">
+    <div class="overlay"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="block text-center">
+                    <span class="text-white">We are Taiwanese students...</span>
+                    <h1 class="text-capitalize mb-5 text-lg">And We are helping the world！</h1>
+                    <h4 class="text-white">我們的力量放在整個社會架構中，或許十分的渺小，但是，只要有開始，<br> 哪怕是一點點的改變，有一天，那一點都可能撼動全世界
+                    </h4>
+                    <!-- <ul class="list-inline breadcumb-nav">
+            <li class="list-inline-item"><a href="index.html" class="text-white">Home</a></li>
+            <li class="list-inline-item"><span class="text-white">/</span></li>
+            <li class="list-inline-item"><a href="#" class="text-white-50">About Us</a></li>
+          </ul> -->
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section about-page">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4">
+                <h2 class="title-color">我們的目標</h2>
+                <div class="divider mt-4 mb-5 mb-lg-0"></div>
+            </div>
+            <div class="col-lg-8">
+                <h4 style="color:#223a66;">解決因為貧窮、設備不足導致偏遠地區的數位落差，
+                    我們希望向大眾募集科技類物資提供給偏鄉學校申請，
+                    並招募志工撰寫物資教學文及親至當地教導弱勢學生資訊科技，
+                    透過學校體系與志工來協助縮短數位落差。
+                    除了能使舊物再利用之外，也能提供設備給貧窮學生使用，
+                    藉由志工服務讓弱勢學生擁有學習機會，
+                    亦能減少因偏鄉及貧窮所帶來的學習落差。並為他們提供翻轉貧窮的一束光。</h4>
+                <img src="images/about/sign.png" alt="" class="img-fluid">
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="fetaure-page ">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3 col-md-6">
+                <div class="about-block-item mb-5 mb-lg-0">
+                    <img src="/static/images/GM/nation.jpg" alt="" class="img-fluid w-100">
+                    <h4 class="mt-3">國際視野</h4>
+                    <p>放眼全球有更多貧窮且缺乏資源的孩子需要幫助，我們與國際協會、組織合作，提供科技類物資。</p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <div class="about-block-item mb-5 mb-lg-0">
+                    <img src="/static/images/GM/second.jpg" alt="" class="img-fluid w-100">
+                    <h4 class="mt-3">創造機會</h4>
+                    <p>透過解決設備不足的問題，改善城鄉及學習差距，創造無限未來可能。</p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <div class="about-block-item mb-5 mb-lg-0">
+                    <img src="/static/images/GM/donation.jpg" alt="" class="img-fluid w-100">
+                    <h4 class="mt-3">千里送暖 </h4>
+                    <p>藉由整合物資提供機構申請及招募志工至偏鄉學校，使當地學生能夠得到更多的幫助，傳遞社會溫暖。</p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <div class="about-block-item">
+                    <img src="/static/images/GM/coin.jpg" alt="" class="img-fluid w-100">
+                    <h4 class="mt-3">翻轉貧窮</h4>
+                    <p>「教育是改變貧窮最好的方法」，讓家中無力負擔設備的孩子們能夠學習資訊、科技能力。</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section awards">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-4">
+                <h2 class="title-color">我們的合作夥伴</h2>
+                <div class="divider mt-4 mb-5 mb-lg-0"></div>
+            </div>
+            <div class="col-lg-8">
+                <div class="row">
+                    <div class="col-lg-4 col-md-6 col-sm-6">
+                        <div class="award-img">
+                            <img src="/static/images/service/QF.jpg" alt="" class="img-fluid">
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-6">
+                        <div class="award-img">
+                            <img src="/static/images/service/HJ.jpg" alt="" class="img-fluid">
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-6">
+                        <div class="award-img">
+                            <img src="/static/images/service/PH.jpg" alt="" class="img-fluid">
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-6">
+                        <div class="award-img">
+                            <img src="/static/images/service/MC.png" alt="" class="img-fluid">
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-6">
+                        <div class="award-img">
+                            <img src="/static/images/service/DP.jpg" alt="" class="img-fluid">
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-6">
+                        <div class="award-img">
+                            <img src="/static/images/service/PI.jpg" alt="" class="img-fluid">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section team">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-6">
+                <div class="section-title text-center">
+                    <h2 class="mb-4">國際援助</h2>
+                    <div class="divider mx-auto my-4"></div>
+                    <p>因為有愛，所以富有</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-4 col-md-6 col-sm-6">
+                <div class="team-block mb-5 mb-lg-0">
+                    <img src="/static/images/GM/FS.jpg" alt="" class="img-fluid w-100">
+
+                    <div class="content">
+                        <h4 class="mt-4 mb-0">Heart for Africa (非洲之心)</a></h4>
+                        <p>史瓦濟蘭國內的慈善組織</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 col-sm-6">
+                <div class="team-block mb-5 mb-lg-0">
+                    <img src="/static/images/GM/FH.jpg" alt="" class="img-fluid w-100">
+
+                    <div class="content">
+                        <h4 class="mt-4 mb-0">海地共和國駐台大使館</a></h4>
+                        <p>有59％人口生活在貧困線下<br>(每天生活費低於1.5美元)</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 col-sm-6">
+                <div class="team-block mb-5 mb-lg-0">
+                    <img src="/static/images/GM/FB.jpg" alt="" class="img-fluid w-100">
+
+                    <div class="content">
+                        <h4 class="mt-4 mb-0">貝里斯駐台大使館</a></h4>
+                        <p>貝里斯名列加勒比海地區最貧窮的國家</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<section class="section testimonial">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 offset-lg-6">
+                <div class="section-title">
+                    <h2 class="mb-4">希望之光回饋</h2>
+                    <div class="divider  my-4"></div>
+                </div>
+            </div>
+        </div>
+        <div class="row align-items-center">
+            <div class="col-lg-6 testimonial-wrap offset-lg-6">
+                <div class="testimonial-block">
+                    <div class="client-info ">
+                        <h4>謝謝您們，讓我們有翻轉貧窮的機會！</h4>
+                        <span>臺南市南化區瑞峰國小</span>
+                    </div>
+                    <p>
+                        謝謝您的捐贈，讓我們的學生有機會能使用筆電進行線上學習，不因疫情而被迫中止學習。也希望能透過教育，讓他們有翻轉貧窮的機會！
+                    </p>
+                    <i class="icofont-quote-right"></i>
+
+                </div>
+
+                <div class="testimonial-block">
+                    <div class="client-info">
+                        <h4>山區孩子，有您們真好！</h4>
+                        <span>南投縣仁愛鄉合作國小</span>
+                    </div>
+                    <p>
+                        感謝您的愛心，讓學生感受到了社會的溫暖！期望未來他們能在人生的旅途上銘記這份恩情，未來有能力時，也能回饋社會，成為一名懂得幫助別人的人！
+                    </p>
+                    <i class="icofont-quote-right"></i>
+                </div>
+
+                <div class="testimonial-block">
+                    <div class="client-info">
+                        <h4>謝謝您們，我們深深感受到您們的愛!</h4>
+                        <span>嘉義縣阿里山鄉達邦國小</span>
+                    </div>
+                    <p>
+                        非常謝謝您捐贈的物資，相信經過網頁提供的教學、志工的陪伴，這群孩子未來絕對不會是資訊孤兒，反而還有機會成為一名工程師！
+                    </p>
+                    <i class="icofont-quote-right"></i>
+                </div>
+
+                <div class="testimonial-block">
+                    <div class="client-info">
+                        <h4>因為有您們，讓我們能在資訊的世界裡遨遊</h4>
+                        <span>澎湖縣望安鄉花嶼國小</span>
+                    </div>
+                    <p>
+                        師生對您們的愛心行動表示由衷的感謝，您給我們學校送來了溫暖、給予我們物質上的支持以及精神上的鼓勵！相信透過這些設備，一定能使我們的孩子更為出色！
+                    </p>
+                    <i class="icofont-quote-right"></i>
+                </div>
+
+                <div class="testimonial-block">
+                    <div class="client-info">
+                        <h4>不分貧富，我們都有機會！</h4>
+                        <span>台東縣海瑞鄉加拿國小</span>
+                    </div>
+                    <p>
+                        感謝您的愛心，因為有您，我們的孩子將可以透過這些資訊設備，成為一位國際化的人才，並於未來躋身國際！也期望未來能有更多人支持偏鄉科技教育！
+                    </p>
+                    <i class="icofont-quote-right"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+{% endblock %}
