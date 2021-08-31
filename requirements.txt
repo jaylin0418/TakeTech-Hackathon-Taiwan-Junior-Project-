@@ -3,8 +3,6 @@ flask
 flask-login
 sqlalchemy.orm
 flask-email
-smtplib
-time
 sqlalchemy
 werkzeug.security
 os
