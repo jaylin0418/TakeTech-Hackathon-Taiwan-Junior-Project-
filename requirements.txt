@@ -2,7 +2,7 @@ datetime
 flask
 flask-login
 sqlalchemy.orm
-email
+flask-email
 smtplib
 time
 sqlalchemy
