@@ -2,8 +2,7 @@ datetime
 flask
 flask-login
 sqlalchemy.orm
-email.mime.multipart
-email.mime.text
+email
 smtplib
 time
 sqlalchemy
