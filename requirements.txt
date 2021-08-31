@@ -5,7 +5,6 @@ sqlalchemy.orm
 flask-email
 sqlalchemy
 werkzeug
-os
 flask_sqlalchemy
 flask_migrate
 flask-wtf
