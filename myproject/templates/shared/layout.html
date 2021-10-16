@@ -39,7 +39,8 @@
 						<ul class="top-bar-info list-inline-item pl-0 mb-0">
 							<li class="list-inline-item"><a href="mailto:support@gmail.com"><i
 										class="icofont-support-faq mr-2"></i>tacktech@gmail.com</a></li>
-							<li class="list-inline-item"><i class="icofont-location-pin mr-2"></i>No. 135, Ln. 189, Zhongshan 1st Rd., Zhongshan Dist., Keelung City , Taiwan</li>
+							<li class="list-inline-item"><i class="icofont-location-pin mr-2"></i>No. 135, Ln. 189,
+								Zhongshan 1st Rd., Zhongshan Dist., Keelung City , Taiwan</li>
 						</ul>
 					</div>
 					<div class="col-lg-6">
@@ -79,7 +80,7 @@
 							</ul>
 						</li>
 						<li class="nav-item"><a class="nav-link" href="/article">科技教學</a></li>
-						
+
 						{% if current_user.role == 'G' %}
 						<li class="nav-item dropdown">
 							<a class="nav-link dropdown-toggle" href="doctor.html" id="dropdown04"
@@ -92,13 +93,13 @@
 							</ul>
 						</li>
 						{% endif %}
-						
+
 						<li class="nav-item dropdown">
 							<a class="nav-link dropdown-toggle" href="blog-sidebar.html" id="dropdown05"
 								data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">合作夥伴 <i
 									class="icofont-thin-down"></i></a>
 							<ul class="dropdown-menu" aria-labelledby="dropdown05">
-								<li><a class="dropdown-item" href="/schools">台灣偏鄉小學</a></li>								
+								<li><a class="dropdown-item" href="/schools">台灣偏鄉小學</a></li>
 								<li><a class="dropdown-item" href="/international">國際互助</a></li>
 								<li><a class="dropdown-item" href="/requests">各學校及組織的需求及介紹</a></li>
 							</ul>
@@ -111,7 +112,7 @@
 								data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">關於我們 <i
 									class="icofont-thin-down"></i></a>
 							<ul class="dropdown-menu" aria-labelledby="dropdown05">
-								<li><a class="dropdown-item" href="/contact">聯絡我們</a></li>								
+								<li><a class="dropdown-item" href="/contact">聯絡我們</a></li>
 								<li><a class="dropdown-item" href="/team_info">團隊介紹</a></li>
 							</ul>
 						</li>
@@ -130,7 +131,8 @@
 						</li>
 						{% endif %}
 						{% if current_user.is_authenticated %}
-						<li class="nav-item"><a class="nav-link" href="/{{current_user.user_id}}">{{current_user.user_id}}</a></li>
+						<li class="nav-item"><a class="nav-link"
+								href="/{{current_user.user_id}}">{{current_user.user_id}}</a></li>
 						{% else %}
 						<li class="nav-item"><a class="nav-link" href="/home">未登入</a></li>
 						{% endif %}
@@ -611,17 +613,14 @@
 				<div class="col-lg-4 mr-auto col-sm-6">
 					<div class="widget mb-5 mb-lg-0">
 						<div class="logo mb-4">
-							<img src="/static/images/bg/33.png" alt="" class="img-fluid" >
+							<img src="/static/images/bg/33.png" alt="" class="img-fluid">
 						</div>
 						<p>消除貧窮，從你我開始</p>
 
 						<ul class="list-inline footer-socials mt-4">
-							<li class="list-inline-item"><a href="#"><i
-										class="icofont-facebook"></i></a></li>
-							<li class="list-inline-item"><a href="#"><i
-										class="icofont-twitter"></i></a></li>
-							<li class="list-inline-item"><a href="#"><i
-										class="icofont-linkedin"></i></a></li>
+							<li class="list-inline-item"><a href="#"><i class="icofont-facebook"></i></a></li>
+							<li class="list-inline-item"><a href="#"><i class="icofont-twitter"></i></a></li>
+							<li class="list-inline-item"><a href="#"><i class="icofont-linkedin"></i></a></li>
 						</ul>
 					</div>
 				</div>
@@ -684,8 +683,7 @@
 				<div class="row align-items-center justify-content-between">
 					<div class="col-lg-6">
 						<div class="copyright">
-							&copy; Copyright Reserved to <span class="text-color">Novena</span> by <a
-								href="https://themefisher.com/" target="_blank">Themefisher</a>
+							&copy; Copyright Reserved to <span class="text-color">TackTech</span>
 						</div>
 					</div>
 					<div class="col-lg-6">
