@@ -1,4 +1,4 @@
-from myproject import db, login_manager
+from myproject import app, db, login_manager
 from werkzeug.security import generate_password_hash, check_password_hash
 from flask_login import UserMixin
 
@@ -75,9 +75,10 @@ class Volunteer(db.Model):
         self.time=time
         self.contact=contact
 
+with app.app_context():
+    db.create_all()
 
-
-db.create_all()
+#db.create_all() 
 db.session.commit()
 
 
