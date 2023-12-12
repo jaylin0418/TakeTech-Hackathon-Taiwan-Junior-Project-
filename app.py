@@ -19,17 +19,17 @@ def home():
     return render_template('home.html')
 
 
-array = Product.query.all()
-array_num = []
-for i in array:
-    array_num.append(i.id)
-print(array_num)
+# array = Product.query.all()
+# array_num = []
+# for i in array:
+#     array_num.append(i.id)
+# print(array_num)
 
 
-array_username = []
-k = User.query.all()
-for i in k:
-    array_username.append(i.user_id)
+# array_username = []
+# k = User.query.all()
+# for i in k:
+#     array_username.append(i.user_id)
 
 
 @app.route('/intro')
