@@ -8,4 +8,4 @@ werkzeug
 flask_sqlalchemy
 flask_migrate
 flask-wtf
-wtforms
+wtforms==2.3.3

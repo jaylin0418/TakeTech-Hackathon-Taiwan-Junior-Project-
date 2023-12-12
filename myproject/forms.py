@@ -5,6 +5,7 @@ from wtforms.validators import DataRequired, Email, EqualTo, email_validator
 from wtforms import ValidationError
 from wtforms.widgets.core import TextArea
 from wtforms import IntegerField
+from wtforms import StringField
 #from wtforms.fields.core import IntegerField
 
 
