@@ -77,9 +77,10 @@ class Volunteer(db.Model):
 
 with app.app_context():
     db.create_all()
+    db.session.commit()
 
 #db.create_all() 
-db.session.commit()
+#db.session.commit()
 
 
 @login_manager.user_loader
