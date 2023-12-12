@@ -1,10 +1,11 @@
 from flask_wtf import FlaskForm
 from wtforms import StringField, PasswordField, SubmitField, RadioField, DateField
-from wtforms.fields.core import IntegerField
 from wtforms.fields.simple import TextField
 from wtforms.validators import DataRequired, Email, EqualTo, email_validator
 from wtforms import ValidationError
 from wtforms.widgets.core import TextArea
+from wtforms import IntegerField
+#from wtforms.fields.core import IntegerField
 
 
 class RegistrationForm(FlaskForm):
