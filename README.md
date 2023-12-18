@@ -1,5 +1,8 @@
 # TakeTech
 
+## Award
+We recieved second place at 2021 Hackathon Taiwan Junior with this app project.
+
 ## Overview
 This repository contains the Flask application for a platform designed to facilitate donations and volunteer activities. It allows organizations to manage and display a complete list of resources, volunteer opportunities, and organization information. Individual donors can view their donated items, and both types of users can register as volunteers and donate items.
 
